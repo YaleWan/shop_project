@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/sellerCss/shopManger.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="user">
+                <label>用户：</label>
+                <span>马云</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>首页</li>
+                    <li>联系客服</li>
+                    <li>帮助中心</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="bg">
+        <div class="bg_sl">
+            <h1>中小微企业商城</h1>
+            <span>个人中心</span>
+        </div>
+    </div>
+    <section>
+        <div class="cont">
+            <aside>
+                <div class="hear_ig">
+                    <img src="../images/img_seller/mayun.png" alt="">
+                </div>
+                <div class="shuqian">合作伙伴</div>
+                <div class="lists">
+                    <ul>
+                        <li><a href="personalCenter.html">个人中心</a></li>
+                        <li class="active">商品管理</li>
+                        <li><a href="postTrade.html">发布商品</a></li>
+                        <li><a href="index.html">订单中心</a></li>
+                        <li><a href="">资金管理</a></li>
+                        <li><a href="">交易记录</a></li>
+                        <li><a href="">信息管理</a></li>
+                        <li><a href="">账号管理</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="content">
+                <div class="title">
+                    <ul>
+                        <li class="active">全部商品</li>
+                        <li>待上架商品</li>
+                        <li>已上架商品</li>
+                        <li>已下架商品</li>
+                        <li>审批未通过商品</li>
+                        <li>已删除商品</li>
+                    </ul>
+                </div>
+
+                <div class="serch">
+
+                    <div>
+                        <label>商品名称：</label>
+                        <input type="text" class="proName">
+                    </div>
+                    <div>
+                        <label>商品价格：</label>
+                        <input type="text" class="proMinPrice">
+                        <span>——</span>
+                        <input type="text" class="proMaxPrice">
+                    </div>
+                    <div>
+                        <label>总销量：</label>
+                        <input type="text" class="proMinTotal">
+                        <span>——</span>
+                        <input type="text" class="proMinTotal">
+                    </div>
+
+
+                </div>
+                <div class="btn">
+                    <button class="serchBtn">搜索订单</button>
+                    <button>清空</button>
+                </div>
+
+                <div class="order">
+                    <table class="ct" cellspacing="0" cellpadding="0">
+                        <tr class="thead">
+                            <th>商品</th>
+                            <th>价格</th>
+                            <th>库存</th>
+                            <th>总销量</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </tr>
+
+
+
+
+
+
+                    </table>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>版权所有归</p>
+            <p>微信息产业科技有限公司</p>
+            <p>技术支持</p>
+            <p>微小科技有限公司</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/banner.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../data/bannerSrc.js"></script>
+    <script src="../data/productList.js"></script>
+
+    <script type="text/x-jquery-tmpl" id="order">
+        <tr class='tr'>
+            <td class='left'>
+                <img src="${img}">
+                <div>
+                    <p>${name}</p>
+                    <p>${attributes}</p>
+                    <p>${msg}</p>
+                </div> 
+            </td>
+            <td>${price}</td>
+            <td>${inventory}</td>
+            <td>${total}</td>
+            <td>${time}</td>
+            <td>
+                <button>下架</button>
+                <button>复制</button>
+            </td>
+        </tr>
+    </script>
+    <script>
+        $("#order").tmpl(productList).appendTo(".ct");
+        
+        
+        function serch(keywords) {
+            var newOrder = [];
+            productList.forEach(element => {
+                if (element.name.includes(keywords)) {
+                    newOrder.push(element);
+                }
+            });
+            $("#order").tmpl(newOrder).appendTo(".ct");
+            console.log(newOrder)
+            
+            
+        }
+
+        $('.serchBtn').click(function () {
+            var keywords = $('.proName').val();
+            $('.tr').remove();
+            serch(keywords);
+
+        })
+    </script>
+
+</body>
+
+</html>

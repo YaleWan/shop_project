@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/sellerCss/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="user">
+                <label>用户：</label>
+                <span>马云</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>首页</li>
+                    <li>联系客服</li>
+                    <li>帮助中心</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="bg">
+        <div class="bg_sl">
+            <h1>中小微企业商城</h1>
+            <span>个人中心</span>
+        </div>
+    </div>
+    <section>
+        <div class="cont">
+            <aside>
+                <div class="hear_ig">
+                    <img src="../images/img_seller/mayun.png" alt="">
+                </div>
+                <div class="shuqian">合作伙伴</div>
+                <div class="lists">
+                    <ul>
+                        <li><a href="personalCenter.html">个人中心</a></li>
+                        <li><a href="shopManger.html">商品管理</a></li>
+                        <li><a href="postTrade.html">发布商品</a></li>
+                        <li class="active">订单中心</li>
+                        <li><a href="">资金管理</a></li>
+                        <li><a href="">交易记录</a></li>
+                        <li><a href="">信息管理</a></li>
+                        <li><a href="">账号管理</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="content">
+                <div class="serch">
+
+                    <div>
+                        <label>商品名称：</label>
+                        <input type="text" class="proName">
+                    </div>
+                    <div>
+                        <label>成交时间：</label>
+                        <input type="text" placeholder='开始时间'>
+                    </div>
+                    <div>
+                        <label>成交时间：</label>
+                        <input type="text" placeholder="结束时间">
+                    </div>
+                    <div>
+                        <label>买家名称：</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>买家单号：</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>商家单号： </label>
+                        <input type="text">
+                    </div>
+
+
+                </div>
+                <div class="btn">
+                    <button class="serchBtn">搜索订单</button>
+                    <button>导出/下载历史订单</button>
+                </div>
+
+                <div class="details">
+                    <ul>
+                        <li>近3个月的订单（）</li>
+                        <li>等待买家付款（）</li>
+                        <li>等待发货（）</li>
+                        <li>已完成订单（）</li>
+                        <li>3个月前的订单（）</li>
+                    </ul>
+                </div>
+
+                <div class="order">
+                    <table class="ct" cellspacing="0" cellpadding="0">
+                        <tr class="thead">
+                            <th>商品</th>
+                            <th>销售属性</th>
+                            <th>价格</th>
+                            <th>买家</th>
+                            <th>详情</th>
+                        </tr>
+
+
+
+
+
+
+                    </table>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>版权所有归</p>
+            <p>微信息产业科技有限公司</p>
+            <p>技术支持</p>
+            <p>微小科技有限公司</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../data/bannerSrc.js"></script>
+    <script src="../data/order.js"></script>
+
+    <script type="text/x-jquery-tmpl" id="order">
+        <tr class='t1 tr'>
+            <td colspan='5'>
+                <span>买家单号：${buyerOrder}</span>
+                <span>卖家单号：${sellerOrder}</span>
+                <span>买家电话：${buyerTel}</span>
+            </td>
+        </tr>
+            {{each(i,e) products}}
+            <tr class='products tr'>
+                <td class='left'>
+                    <img src="${e.img}">
+                    <div>
+                        <p>${e.name}</p>
+                        <p>${e.msg}</p>
+                    </div>
+                </td>
+                <td>
+                    ${e.attribute}
+                </td>
+                <td>
+                    ${e.price}
+                </td>
+                <td>
+                    ${sellerName}
+                </td>
+                <td>
+                    <a href="#">订单详情</a>
+                </td>
+
+            </tr>
+            {{/each}}
+    </script>
+    <script>
+        $("#order").tmpl(order).appendTo(".ct");
+
+
+        function serch(keywords) {
+            var newOrder = [];
+            order.forEach(element => {
+                if (JSON.stringify(element).includes(keywords)) {
+                    newOrder.push(element);
+                }
+            });
+            if(newOrder.length==0){
+                $(".ct").append('<p>对不起，您暂时还没有订单的详情！</p>')
+            }else{
+                $("#order").tmpl(newOrder).appendTo(".ct");
+            }
+            
+        }
+
+        $('.serchBtn').click(function () {
+            var keywords = $('.proName').val();
+            $('.tr').remove();
+            $('table p').remove();
+            serch(keywords);
+
+        })
+
+    </script>
+</body>
+
+</html>

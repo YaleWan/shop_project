@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/shoperCss/normal.css">
+    <link rel="stylesheet" href="../css/shoperCss/details.css">
+</head>
+<body>
+<header>
+    <div class="headleft">
+        <ul>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">我的商品</a></li>
+        </ul>
+    </div>
+    <div class="headright">
+        <ul>
+            <li>用户名</li>
+            <li><a href="#" class="active">你好，请登录</a></li>
+            <li><a href="#">用户注册</a></li>
+            <li><a href="#" class="active">卖家个人中心</a></li>
+            <li><a href="#" class="active">买家个人中心</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </div>
+</header>
+
+<nav>
+    <div class="logo">中小微企业云服务品台</div>
+    <div>
+        <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="product.html">应用超市</a></li>
+            <li><a href="service.html">云资源服务</a></li>
+            <li><a href="#">电子商务服务</a></li>
+            <li><a href="#">政企服务</a></li>
+            <li><a href="#">解决方案</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="buy">
+
+    <form action="" class="ct">
+
+    </form>
+
+</div>
+
+
+<div class="banner">
+    <img src="images/1489559198459.jpg" alt="">
+</div>
+<div id="link">
+    <ul>
+        <li>
+            <h3>关于我们</h3>
+            <ul>
+                <li>官方微信</li>
+                <li>官方微博</li>
+                <li>平台介绍</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>关于我们</h3>
+            <ul>
+                <li>官方微信</li>
+                <li>官方微博</li>
+                <li>平台介绍</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>支付方式</h3>
+            <ul>
+                <li>微信支付</li>
+                <li>支付宝</li>
+                <li>翼支付</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>商务合作</h3>
+            <ul>
+                <li>合作机会</li>
+            </ul>
+        </li>
+        <li>
+            <h3>服务与支持</h3>
+            <ul>
+                <li>使用帮助</li>
+                <li>故障申报</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>友情链接</h3>
+            <ul>
+                <li>阿里云服务</li>
+                <li>天翼云</li>
+                <li>客服官网</li>
+            </ul>
+
+        </li>
+
+    </ul>
+</div>
+
+
+<footer>
+    <div>
+        <p>版权所有归</p>
+        <p>微信息产业科技有限公司</p>
+        <p>技术支持</p>
+        <p>微小科技有限公司</p>
+    </div>
+</footer>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.tmpl.js"></script>
+<script src="../data/proPurchase.js"></script>
+
+<script type="text/x-jquery-tmpl" id="proPurchase">
+    <div>
+        <img src="${img}" alt="">
+    </div>
+    <div class="cont">
+        <h3>${name}</h3>
+        <ul>
+            <li>
+                <lable>性价比之王：</lable>
+                <span>${introduction}</span>
+            </li>
+            <li>
+                <lable>库存：</lable>
+                <span>${inventory}</span>
+            </li>
+            <li class = 'totalPrice'>
+                <lable>资费：</lable>
+                <span  dataPrice ="${price}" class = 'price'></span>
+            </li>
+            <li class = 'color'>
+                <lable>颜色：</lable>
+                <div>
+                    {{each(i,e) colorSort}}
+                    <span dataPrice = '${e.price}'>${e.color}</span>
+                    {{/each}}
+                </div>
+            </li>
+            <li class = 'memory'>
+                <lable>内存：</lable>
+                <div>
+                    {{each(i,e) memorySort}}
+                    <span dataPrice = '${e.price}'>${e.memory}</span>
+                    {{/each}}
+                </div>
+            </li>
+            <li class = 'capacity'>
+                <lable>存储：</lable>
+                <div>
+                    {{each(i,e) capacitySort}}
+                    <span dataPrice = '${e.price}'>${e.capacity}</span>
+                    {{/each}}
+                </div>
+            </li>
+            <li>
+               <lable>购买数量：</lable>
+               <div>
+                    <input class="min" name="" type="button" value="-" />
+                    <input type="text"  class='num' value='1' />
+                    <input class="add" name="" type="button" value="+" />
+               </div> 
+            </li>
+        </ul>
+        <div class='btn'>
+            <button>立即购买</button>
+            <button>加入购物车</button>  
+        </div>
+    </div>
+</script>
+<script>
+    (function(){
+        $("#proPurchase").tmpl(proPurchase).appendTo(".ct");
+        //定义相应的 变量
+        var price = parseInt($(".price").attr("dataPrice"));
+        var totalPrice;
+        var num;
+        var colorPrice;
+        var memoryPrice;
+        var capacityPrice;
+        //点击时的事件
+        $(".color span").click(function () {
+            //显示移除相应的样式
+            $(this).addClass('active').siblings().removeClass('active');
+            // 调用渲染价格函数
+            showPrice()
+        })
+        $(".memory span").click(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+            showPrice()
+        })
+        $(".capacity span").click(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+            showPrice()
+        })
+
+        
+
+
+    // 将价格 渲染 到页面上去
+        function showPrice(){
+            num = parseInt($(".num").val())
+            getCapacityPrice();
+            getMemoryPrice();
+            getColorPrice();
+            totalPrice = (colorPrice+memoryPrice+capacityPrice+price)*num;
+
+
+            if(totalPrice){
+                $('.price').text("￥"+totalPrice)
+            }
+        }
+
+
+        //分别取得 颜色 内存 存储 对应的价格
+
+        function getMemoryPrice(){
+            $(".memory span").each(function () {
+                if($(this).hasClass('active')){
+                    memoryPrice = parseInt($(this).attr("dataPrice"))
+                }
+            })
+        }
+        function getCapacityPrice(){
+            $(".capacity span").each(function () {
+                if($(this).hasClass('active')){
+                    capacityPrice = parseInt($(this).attr("dataPrice"))
+                }
+            })
+        }
+        function getColorPrice() {
+            $(".color span").each(function () {
+                if($(this).hasClass('active')){
+                    colorPrice = parseInt($(this).attr("dataPrice"))
+                }
+            })
+        }
+
+        $(".add").click(function() {
+            
+            $(this).prev().val(parseInt($(this).prev().val()) + 1);
+            showPrice();
+        });
+  
+        $(".min").click(function() {
+            if(parseInt($(this).next().val())==1){return false}
+            $(this).next().val(parseInt($(this).next().val()) - 1);
+            showPrice();
+        });
+
+
+
+    }())
+    
+
+    
+    
+
+
+</script>
+
+
+</body>
+</html>

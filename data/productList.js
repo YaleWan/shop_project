@@ -1,0 +1,35 @@
+var productList = [
+    {
+        id:'1',
+        img:"../images/img_seller/1496210830044.jpg",
+        name:'小米手机P9',
+        attributes:['红色','16g'],
+        msg:'爆款手机',
+        price:'￥999.00',
+        inventory:'500',
+        total:'10',
+        time:'2018-10-12'
+    },
+    {
+        id:'2',
+        img:"../images/img_seller/1496210830044.jpg",
+        name:'苹果8',
+        attributes:['骚粉','16g'],
+        msg:'爆款手机',
+        price:'￥2099.00',
+        inventory:'500',
+        total:'10',
+        time:'2018-90-12'
+    },
+    {
+        id:'3',
+        img:"../images/img_seller/1496210830044.jpg",
+        name:'游侠',
+        attributes:['黑','16g'],
+        msg:'爆款手机',
+        price:'￥1599.00',
+        inventory:'200',
+        total:'30',
+        time:'2018-20-12'
+    }
+]

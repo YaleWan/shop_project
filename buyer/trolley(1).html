@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/buyerCss/trolley.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="user">
+                <label>用户：</label>
+                <span>马云</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>首页</li>
+                    <li>联系客服</li>
+                    <li>帮助中心</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="bg">
+        <div class="bg_sl">
+            <h1>中小微企业商城</h1>
+            <span>个人中心</span>
+        </div>
+    </div>
+    <section>
+        <div class="cont">
+            <aside>
+                <div class="hear_ig">
+                    <img src="../images/img_seller/mayun.png" alt="">
+                </div>
+                <div class="shuqian">合作伙伴</div>
+                <div class="lists">
+                    <ul>
+                        <li class="active">我的订单</li>
+                        <li><a href="">我的商品</a></li>
+                        <li><a href="">购物车</a></li>
+                        <li><a href="">信息管理</a></li>
+                        <li><a href="">用户管理</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="content">
+                <div class="serch">
+
+                    <div>
+                        <label>商品名称：</label>
+                        <input type="text" class="proName">
+                    </div>
+
+                    <div class="btn">
+                        <button class="serchBtn">搜索订单</button>
+                    </div>
+
+                </div>
+
+
+                <div class="details">
+                    <ul>
+                        <li class="active">所有商品</li>
+                        <li>库存紧张</li>
+                    </ul>
+                </div>
+
+                <div class="order">
+                    <table class="ct" cellspacing="0" cellpadding="0">
+                        <tr class="thead">
+                            <th>
+                                <div style="float:left;margin-left: 30px;">
+                                    <input type="checkbox" />全选
+                                </div>
+
+                                商品信息
+                            </th>
+                            <th>数量</th>
+                            <th>产品介绍</th>
+                            <th>资费</th>
+                            <th>操作</th>
+                        </tr>
+
+                    </table>
+                    <div class="total">
+                        <div>
+                            <p>已选商品<span class="sum">0</span>件</p>
+                            <p>合计：<span class="price">0</span></p>
+                        </div>
+                        <button>结算</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>版权所有归</p>
+            <p>微信息产业科技有限公司</p>
+            <p>技术支持</p>
+            <p>微小科技有限公司</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/banner.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../data/trolley.js"></script>
+
+    <script type="text/x-jquery-tmpl" id="order">
+        <tr class='t1 tr'>
+            <td>
+                
+                <input type='checkbox' data-value='${id}' name='list'/>
+                <img src='${img}'/ >
+                <div>
+                    <h3>${name}</h3>
+                    <p>${msg}</p>
+                </div>
+            </td>
+            <td>
+                ${number}
+            </td>
+            <td>
+                ${introduce}
+            </td>
+            <td>
+                ${price}
+            </td>
+            <td>
+               <a href='#'>删除</a>
+            </td>
+        </tr>
+          
+    </script>
+    <script>
+        $("#order").tmpl(trolley).appendTo(".ct");
+
+
+        function serch(keywords) {
+            var newOrder = [];
+            trolley.forEach(element => {
+                if (JSON.stringify(element).includes(keywords)) {
+                    newOrder.push(element);
+                }
+            });
+            $("#order").tmpl(newOrder).appendTo(".ct");
+        }
+
+        $('.serchBtn').click(function () {
+            var keywords = $('.proName').val();
+            $('.tr').remove();
+            serch(keywords);
+
+        })
+
+        $("input[name='list']").click(function(){
+            var list = $("input[name='list']:checked");
+            $('.sum').text(list.length);
+            var price = 0;
+            for(var i = 0 ; i < list.length ; i++){
+                var id = list[i].getAttribute('data-value');
+                price += parseFloat(trolley[id].price);
+            }
+
+            $('.price').html(price);
+
+        })
+
+    </script>
+
+</body>
+
+</html>

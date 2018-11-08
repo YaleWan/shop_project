@@ -1,0 +1,223 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 50px;
+}
+.user{
+    float: left;
+}
+.nav{
+    float: right;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.bg{
+    background: #3899f6;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    
+}
+
+.bg_sl{
+    width: 1200px;
+    margin:  0 auto;
+}
+.bg h1,.bg span{
+    float: left;
+}
+.bg h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+.bg span{
+    font-size: 16px;
+    margin-left: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+.cont{
+    width: 1200px;
+    margin:  0 auto;
+}
+section{
+    overflow: hidden;
+}
+
+aside{
+    width: 150px;
+    background: #f7f7f7;
+    float: left;
+    padding-bottom: 50px;
+}
+.hear_ig{
+    width: 100px;
+    height: 100px;
+    margin:  0 auto; 
+    padding: 10px; 
+}
+.hear_ig img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.shuqian{
+    line-height: 35px;
+    padding-left: 10px;
+    color: white;
+    width: 150px;
+    height: 35px;
+    background: url(../../images/img_seller/shutiao.png) no-repeat;
+}
+
+.lists li{
+    line-height: 30px;
+    cursor: pointer;
+}
+.lists li a {
+    text-decoration: none;
+    color: #000;
+}
+.lists li.active{
+    color: orange;
+}
+
+.content{
+    width: 1000px;
+    float: right;
+    
+        
+}
+.serch>div{
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.serch{
+    width: 900px;
+    overflow: hidden;
+}
+input::-webkit-input-placeholder {
+        color: #aab2bd;
+        font-size: 12px;
+}
+.btn {
+    margin-left: 50px;
+}
+.btn button{
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    background: orange;
+    color: white;
+}
+
+.details{
+    height: 40px;
+    font-size: 12px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+.details ul{
+    height: 30px;
+    margin-top: 10px;
+}
+.details li{
+    float: left;
+    padding: 10px 20px;
+    border-right: 1px solid #ccc;
+}
+.details li.active{
+    border-bottom: 2px solid orange;
+    color: orange;
+}
+table p{
+    line-height: 20px;
+}
+table .thead{
+   line-height: 80px;
+   background: #f7f7f7;
+    
+}
+table td{
+    font-size: 12px;
+    padding: 20px 30px;
+    border: 1px solid #f7f7f7;
+}
+table img{
+    width: 50px;
+    height: 50px;
+    
+}
+table .t1 input{
+    margin-top: 20px;
+}
+
+table img,
+table .t1 td input{
+    float: left;
+    padding: 10px;
+}
+table .t1 div{
+    width: 300px;
+    float: left;
+}
+.total{
+    height: 50px;
+    float: right;
+    margin: 20px 20px 50px 0;
+}
+.total span{
+    color: orange;
+}
+.total button,
+.total div{
+    float: left;
+}
+.total button{
+    width: 70px;
+    height: 30px;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+}
+.total p {
+    margin-right: 30px;
+    display: inline-block;
+}
+
+
+footer{
+    text-align: center;
+    background: #2C76BD;
+    color: #ccc;
+    padding: 20px;
+    font-size: 12px;
+}
+
+
+
+
+

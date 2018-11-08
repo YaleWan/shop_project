@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 50px;
+}
+.user{
+    float: left;
+}
+.nav{
+    float: right;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.bg{
+    background: #3899f6;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    
+    
+    
+}
+
+.bg_sl{
+    width: 1200px;
+    margin:  0 auto;
+}
+.bg h1,.bg span{
+    float: left;
+}
+.bg h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+.bg span{
+    font-size: 16px;
+    margin-left: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+
+.conent{
+    width: 1200px;
+    margin:  0 auto;
+    font-size: 12px;
+}
+.conent h3{
+    height: 50px;
+    line-height: 50px;
+    background: #f7f7f7;
+    font-weight: normal;
+    font-size: 16px;
+    padding-left: 40px;
+}
+.attributes,
+.destribe{
+    margin-left: 10px;
+}
+.conent p {
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+table i ,
+.attributes i,
+.destribe i{
+    color: red;
+}
+.conent p i {
+    color: red;
+}
+.lists li a {
+    text-decoration: none;
+    color: #000;
+}
+.attributes label,
+.destribe label,
+.conent p label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.attributes{
+    height: 50px;
+    width: 200px;
+}
+.choiceBtn{
+    display: none;
+    margin-left: 260px;
+}
+.conent table{
+    background:azure;
+}
+.conent table tr th{
+    padding: 20px 30px;
+}
+
+.conent table tr th:first-child{
+    width: 200px;
+}
+table{
+    padding: 20px;
+}
+table.tr{
+    padding-top: 20px;
+}
+table td{
+    text-align: center;
+
+}
+.opt{
+    display: none;
+    border: 1px solid red;
+    margin-bottom: 10px;
+}
+.opt input{
+    width: 100px;
+}
+select{
+    margin-left: 10px;
+    vertical-align: top;
+    border-radius: 3px ;
+}
+
+
+footer{
+    text-align: center;
+    background: #2C76BD;
+    color: #ccc;
+    padding: 20px;
+    font-size: 12px;
+    clear: both;
+}

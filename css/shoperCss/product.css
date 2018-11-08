@@ -1,0 +1,46 @@
+
+#content{
+    padding: 50px;
+}
+#content .cont{
+    margin-top: 30px;
+    float: left;
+    width: 800px;
+
+
+}
+#content .cont img{
+    width: 50px;
+    height: 50px;
+}
+#content .cont div{
+
+
+    width: 200px;
+    float: left;
+    padding: 10px;
+    position: relative;
+}
+#content .cont div span{
+    vertical-align: top;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    color: cornflowerblue;
+}
+#content>div{
+    overflow: hidden;
+}
+#content .message{
+    width: 400px;
+}
+#content>div>div>div{
+    float: left;
+}
+#content>div h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+

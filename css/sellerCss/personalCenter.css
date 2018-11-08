@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 50px;
+}
+.user{
+    float: left;
+}
+.nav{
+    float: right;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.bg{
+    background: #3899f6;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    
+    
+    
+}
+
+.bg_sl{
+    width: 1200px;
+    margin:  0 auto;
+}
+.bg h1,.bg span{
+    float: left;
+}
+.bg h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+.bg span{
+    font-size: 16px;
+    margin-left: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+.cont{
+    width: 1200px;
+    margin:  0 auto;
+    
+    overflow: hidden;
+}
+.lists li a {
+    text-decoration: none;
+    color: #000;
+}
+
+aside{
+    width: 150px;
+    background: #f7f7f7;
+    float: left;
+    padding-bottom: 50px;
+}
+.hear_ig{
+    width: 100px;
+    height: 100px;
+    margin:  0 auto; 
+    padding: 10px; 
+}
+.hear_ig img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.shuqian{
+    line-height: 35px;
+    padding-left: 10px;
+    color: white;
+    width: 150px;
+    height: 35px;
+    background: url(../../images/img_seller/shutiao.png) no-repeat;
+}
+
+.lists li{
+    line-height: 30px;
+    cursor: pointer;
+}
+.lists li.active{
+    color: orange;
+}
+
+.content{
+    width: 1000px;
+    float: right;
+        
+}
+.head{
+    height: 80px;
+    font-size: 12px;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.logo img{
+    padding:15px 10px;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.head li{
+    width: 200px;
+    text-align: left;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-right: 200px;
+}
+.head li:nth-child(2) span{
+    width: 10px;
+    height:10px;
+    display: inline-block;
+
+    background: url(../../images/img_seller/gold.png);
+    background-size: 100% 100%;
+
+}
+.head li:nth-child(3) label{
+    display: inline-block;
+    height: 30px;
+    padding-left: 25px;
+    background: url(../../images/img_seller/sell.png) no-repeat;
+    
+}
+.head li:nth-child(4) label{
+    display: inline-block;
+    height: 30px;
+    padding-left: 25px;
+    background: url(../../images/img_seller/time.png) no-repeat;
+    
+    
+}
+.head .setBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #2C76BD ;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.manger{
+    margin-top: 30px;
+}
+.shopMg{
+    
+    float: left;
+    overflow: hidden;
+    
+}
+.moneyMg>div,
+.shopMg>div{
+    width: 400px;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 30px;
+    background: #f7f7f7;
+}
+.shopMg i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../../images/img_seller/menu_logo_1.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+.shopMg li{
+    margin: 10px 40px;
+    text-align: center;
+}
+.moneyMg{
+    float: right;
+    margin-left: 20px;
+}
+.moneyMg p{
+    height: 70px;;
+}
+.moneyMg p span{
+    color: orange;
+}
+.moneyMg p i {
+    margin-left: 20px;
+    width: 30px;
+    background: url(../../images/img_seller/eye.png) no-repeat;
+}
+.moneyMg button{
+   float:  right;
+   padding: 5px 10px;
+   background: #2C76BD ;
+   border: none;
+   color: white;
+   border-radius: 5px;
+}
+.moneyMg a{
+    float:  right;
+    color: #2C76BD ;
+ }
+.moneyMg  i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../../images/img_seller/menu_logo_2.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+
+footer{
+    text-align: center;
+    background: #2C76BD;
+    color: #ccc;
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 12px;
+}

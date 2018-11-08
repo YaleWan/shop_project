@@ -1,0 +1,67 @@
+
+#banner{
+    min-width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+#banner ul{
+    position: relative;
+    min-height: 600px;
+}
+#banner ul li {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#banner img{
+    min-height: 600px;
+    width: 100%;
+ }
+#banner .dots{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+
+}
+#banner .dots span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+#content{
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.cont li {
+    float: left;
+    margin-left: 50px;
+    margin-top: 100px;
+    text-align: center;
+    line-height: 40px;
+}
+.cont li img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.cont button{
+    padding:5px 10px;
+    background: deepskyblue;
+    color: white;
+    border: none;
+}
+#banner .dots .bg{
+    background: orange;
+}
+

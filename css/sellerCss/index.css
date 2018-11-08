@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 50px;
+}
+.user{
+    float: left;
+}
+.nav{
+    float: right;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.bg{
+    background: #3899f6;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    
+    
+    
+}
+.lists li a {
+    text-decoration: none;
+    color: #000;
+}
+.bg_sl{
+    width: 1200px;
+    margin:  0 auto;
+}
+.bg h1,.bg span{
+    float: left;
+}
+.bg h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+.bg span{
+    font-size: 16px;
+    margin-left: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+.cont{
+    width: 1200px;
+    margin:  0 auto;
+}
+section{
+    overflow: hidden;
+}
+
+aside{
+    width: 150px;
+    background: #f7f7f7;
+    float: left;
+    padding-bottom: 50px;
+}
+.hear_ig{
+    width: 100px;
+    height: 100px;
+    margin:  0 auto; 
+    padding: 10px; 
+}
+.hear_ig img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.shuqian{
+    line-height: 35px;
+    padding-left: 10px;
+    color: white;
+    width: 150px;
+    height: 35px;
+    background: url(../../images/img_seller/shutiao.png) no-repeat;
+}
+
+.lists li{
+    line-height: 30px;
+    cursor: pointer;
+}
+.lists li.active{
+    color: orange;
+}
+
+.content{
+    width: 1000px;
+    float: right;
+    
+        
+}
+.serch>div{
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.serch{
+    width: 900px;
+    overflow: hidden;
+}
+input::-webkit-input-placeholder {
+        color: #aab2bd;
+        font-size: 12px;
+}
+.btn {
+    margin-left: 50px;
+}
+.btn button{
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+}
+.btn button:first-child{
+    background: orange;
+    color: white;
+}
+.btn button:last-child{
+    color: green;
+    background: white;
+    border: 1px solid green;
+    margin-left: 20px;
+}
+
+.details{
+    height: 40px;
+    font-size: 12px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    margin-top: 30px;
+}
+.details ul{
+    height: 30px;
+    margin-top: 10px;
+}
+.details li{
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+table{
+    margin-top: 50px;
+    font-size: 12px;
+}
+table tr{
+    text-align: center;
+}
+table .t1{
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+table .t1 span{
+    margin-left: 20px;
+}
+table .left{
+    text-align: left;
+}
+
+.left img{
+    border: 1px solid #f7f7f7;
+    padding: 5px;
+    margin-left: 20px;
+    float: left;
+}
+.left div{
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+.left div p:last-child{
+    font-size: 12px;
+    color: #999;
+}
+
+table .products{
+    height: 120px;
+
+}
+table .products td{
+    border: 1px solid #f7f7f7;
+    
+}
+
+
+.order .thead ,table .t1{
+    background: #f7f7f7 ;
+}
+.order tr th{
+    width: 50px;
+    padding:10px 30px;
+}
+.order tr th:first-child{
+    width: 500px;
+}
+
+table img{
+    width: 50px;
+    height: 50px;
+}
+
+
+footer{
+    text-align: center;
+    background: #2C76BD;
+    color: #ccc;
+    padding: 20px;
+    font-size: 12px;
+}

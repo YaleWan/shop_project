@@ -1,0 +1,79 @@
+.banner,.buy{
+    width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.buy>div{
+    float: left;
+}
+.buy>div:first-child{
+    border:  1px solid #ccc;
+}
+.buy>div:first-child img{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+}
+
+form>div{
+    float: left;
+}
+.color div,
+.memory div,
+.capacity div,
+.color label,
+.memory label,
+.capacity label{
+    display: inline-block;
+}
+
+.color span,.memory span,.capacity span{
+    padding: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.cont .active{
+    color: orange;
+    border: 2px solid orange !important;
+}
+.cont{
+    margin-left: 50px;
+    line-height: 50px;
+}
+.cont ul{
+    font-size: 16px;
+    margin-left: 30px;
+}
+.cont ul>li:last-child div{
+    display: inline-block;
+}
+.cont ul lable{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+.totalPrice span{
+    font-size: 18px;
+    color: red;
+}
+.btn{
+    margin:30px 100px;
+}
+.btn button{
+    width: 120px;
+    height: 40px;
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.num{
+    width: 30px;
+}
+.add,.min{
+    width: 20px;
+    height: 20px;
+}

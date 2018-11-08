@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/shoperCss/normal.css">
+    <link rel="stylesheet" href="../css/shoperCss/product.css">
+</head>
+<body>
+<header>
+    <div class="headleft">
+        <ul>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">我的商品</a></li>
+        </ul>
+    </div>
+    <div class="headright">
+        <ul>
+            <li>用户名</li>
+            <li><a href="#" class="active">你好，请登录</a></li>
+            <li><a href="#">用户注册</a></li>
+            <li><a href="#" class="active">卖家个人中心</a></li>
+            <li><a href="#" class="active">买家个人中心</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">购物车</a></li>
+            <li><a href="#">退出</a></li>
+        </ul>
+    </div>
+</header>
+
+<nav>
+    <div class="logo">中小微企业云服务品台</div>
+    <div>
+        <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="#">应用超市</a></li>
+            <li><a href="service.html">云资源服务</a></li>
+            <li><a href="details.html">电子商务服务</a></li>
+            <li><a href="#">政企服务</a></li>
+            <li><a href="#">解决方案</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div id="content">
+
+</div>
+<div id="link">
+    <ul>
+        <li>
+            <h3>关于我们</h3>
+            <ul>
+                <li>官方微信</li>
+                <li>官方微博</li>
+                <li>平台介绍</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>关于我们</h3>
+            <ul>
+                <li>官方微信</li>
+                <li>官方微博</li>
+                <li>平台介绍</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>支付方式</h3>
+            <ul>
+                <li>微信支付</li>
+                <li>支付宝</li>
+                <li>翼支付</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>商务合作</h3>
+            <ul>
+                <li>合作机会</li>
+            </ul>
+        </li>
+        <li>
+            <h3>服务与支持</h3>
+            <ul>
+                <li>使用帮助</li>
+                <li>故障申报</li>
+            </ul>
+
+        </li>
+        <li>
+            <h3>友情链接</h3>
+            <ul>
+                <li>阿里云服务</li>
+                <li>天翼云</li>
+                <li>客服官网</li>
+            </ul>
+
+        </li>
+
+    </ul>
+</div>
+
+<footer>
+    <div>
+        <p>版权所有归</p>
+        <p>微信息产业科技有限公司</p>
+        <p>技术支持</p>
+        <p>微小科技有限公司</p>
+    </div>
+</footer>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.tmpl.js"></script>
+<script src="../data/product.js"></script>
+
+<script type="text/x-jquery-tmpl" id="product">
+    <div>
+        <h2>${name}</h2>
+        <div>
+            <div class='message'>
+                <div> <img src="${img}" alt=""/> </div>
+                <p>${msg}</p>
+            </div>
+            <div class='cont'>
+                {{each(i,e) products}}
+                <div>
+                    <img src="${e.img}" alt=""/>
+                    <span>${e.name}</span>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+</script>
+
+<script>
+
+    $("#product").tmpl(product).appendTo("#content");
+</script>
+</body>
+</html>

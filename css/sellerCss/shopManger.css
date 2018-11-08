@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 50px;
+}
+.user{
+    float: left;
+}
+.nav{
+    float: right;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.bg{
+    background: #3899f6;
+    height: 70px;
+    line-height: 70px;
+    color: white;
+    
+    
+    
+}
+
+.bg_sl{
+    width: 1200px;
+    margin:  0 auto;
+}
+.bg h1,.bg span{
+    float: left;
+}
+.bg h1{
+    font-weight: normal;
+    font-size: 20px;
+}
+.bg span{
+    font-size: 16px;
+    margin-left: 40px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+.cont{
+    width: 1200px;
+    margin:  0 auto;
+}
+section{
+    overflow: hidden;
+}
+
+aside{
+    width: 150px;
+    background: #f7f7f7;
+    float: left;
+    padding-bottom: 50px;
+}
+.hear_ig{
+    width: 100px;
+    height: 100px;
+    margin:  0 auto; 
+    padding: 10px; 
+}
+.hear_ig img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.shuqian{
+    line-height: 35px;
+    padding-left: 10px;
+    color: white;
+    width: 150px;
+    height: 35px;
+    background: url(../../images/img_seller/shutiao.png) no-repeat;
+}
+
+.lists li{
+    line-height: 30px;
+    cursor: pointer;
+}
+.lists li.active{
+    color: orange;
+}
+
+.content {
+    margin-left: 20px;
+    float: left;
+}
+.title{
+    width: 1000px;
+    border-bottom: 1px solid #ccc;
+}
+.title ul{
+    height: 50px;
+    font-size: 16px;
+    
+}
+.title ul li {
+    height: 30px;
+    margin-top: 20px;
+    padding: 0 10px;
+    margin-left: 0;
+    border-right: 1px solid #ccc;
+}
+.title ul li.active{
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+.serch{
+    margin-top: 20px;
+
+}
+
+.serch>div{
+    height: 40px;
+}
+.serch>div:nth-child(3) input,
+.serch>div:nth-child(2) input{
+   width: 50px;
+}
+.serch>div:nth-child(2),
+.serch>div:nth-child(3){
+    
+    float: left;
+    margin-right: 20px;
+}
+
+.btn {
+    clear: both;
+    margin-left: 50px;
+}
+.btn button{
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+}
+.btn button:first-child{
+    background: orange;
+    color: white;
+}
+.btn button:last-child{
+    color: green;
+    background: white;
+    border: 1px solid green;
+    margin-left: 20px;
+}
+.order{
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #aaa;    
+}
+.order tr th{
+    background: #f7f7f7;
+    width: 100px;
+    padding:10px 20px;
+}
+.order tr th:first-child{
+    width: 260px;
+}
+
+table img{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+table td{
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #f7f7f7;
+}
+table .left{
+    text-align: left
+}
+
+.left div{
+    float: left;
+    margin-left: 20px;
+}
+
+td button{
+    font-size: 12px;
+    width: 50px;
+    height: 25px;
+    line-height: 20px;
+    padding: 5px 10px;
+    background: #2C76BD ;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+.lists li a {
+    text-decoration: none;
+    color: #000;
+}
+    
+
+
+
+
+
+
+
+footer{
+    text-align: center;
+    background: #2C76BD;
+    color: #ccc;
+    padding: 20px;
+    font-size: 12px;
+}

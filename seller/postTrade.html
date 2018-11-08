@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/sellerCss/postTrade.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="user">
+                <label>用户：</label>
+                <span>马云</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>首页</li>
+                    <li>联系客服</li>
+                    <li>帮助中心</li>
+                    <li>退出</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="bg">
+        <div class="bg_sl">
+            <h1>中小微企业商城</h1>
+            <span>个人中心</span>
+        </div>
+    </div>
+    <section>
+        <div class="conent">
+            <form action="javascript:;">
+                <div class="productInfo">
+                    <h3>商品基本信息</h3>
+                    <p>
+                        <i>*</i>
+                        <label>商品名称：</label>
+                        <input type="text">
+                    </p>
+                    <p>
+                        <i>*</i>
+                        <label>销售元素：</label>
+                        <input type="text" class="atr">
+                        <button class="atrBtn">确定元素</button>
+                    </p>
+                    <p class="attributes">
+                        <i>*</i>
+                        <label>销售元素属性：</label>
+                        <div class="choice"></div>
+                        <button class="choiceBtn">确定</button>
+                    </p>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>销售属性 <i>*</i></th>
+                                <th>销售属性值 <i>*</i></th>
+                                <th>商品库存 <i>*</i></th>
+                                <th>警示库存 <i>*</i></th>
+                                <th>价格 <i>*</i></th>
+                                <th>销售属性描述 <i>*</i></th>
+                                <th>操作 </th>
+                            </tr>
+                            <tr class="opt">
+                                <td class="options">
+                                </td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                                <td>-+</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <p>
+                        <i>*</i>
+                        <label>产品类型：</label>
+                        <select name="products">
+                            <option value="请选择产品类型">请选择产品类型</option>
+                        </select>
+                    </p>
+                    <p>
+                        <i>*</i>
+                        <label>上架时间：</label>
+                        <input type="date">
+                    </p>
+                    <p>
+                        <i>*</i>
+                        <label>下架时间：</label>
+                        <input type="date">
+                    </p>
+                    <div class="destribe">
+                        <i>*</i>
+                        <label>商品介绍：</label>
+                        <textarea rows="5" cols="80">
+
+                        </textarea>
+
+                    </div>
+                </div>
+                <div class="productImg">
+                    <h3>商品图片</h3>
+                    <p>
+                        <i>*</i>
+                        <label>商品缩略图：</label>
+                        <input type="file">
+                    </p>
+                    <p>
+                        <i>*</i>
+                        <label>商品缩略图：</label>
+                        <input type="file">
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <div>
+            <p>版权所有归</p>
+            <p>微信息产业科技有限公司</p>
+            <p>技术支持</p>
+            <p>微小科技有限公司</p>
+        </div>
+    </footer>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        var len ;
+        $('.atrBtn').click(function () {
+            
+            
+            var atr = $('.atr').val().split('，');
+            if(atr=='') return;
+            $('.opt').show();
+            len = atr.length;
+            for (var i = 0; i < len; i++) {
+                var choice = document.getElementsByClassName('choice')[0];
+                var p = document.createElement('p');
+                var label = document.createElement('label');
+                var input = document.createElement('input');
+                input.className = 'a'+i;
+                label.innerHTML = atr[i] + '：';
+
+                p.appendChild(label);
+                p.appendChild(input);
+
+                choice.appendChild(p);
+
+                var select = document.createElement('select');
+                var options = document.getElementsByClassName('options')[0];
+                options.appendChild(select);
+
+
+
+            }
+            $('.choiceBtn').show();
+        })
+        var a=[];
+
+        $('.choiceBtn').click(function(){
+            for(var i = 0 ; i<len ; i++){
+                a[i] = $('.a'+i).val().split('，');
+                for(var j = 0 ;j<a[i].length;j++){
+                    var select  = $('select')[i];
+                    console.log(select)
+                    var option  = document.createElement('option');
+                    option.innerHTML = a[i][j];
+                    select.appendChild(option);
+                }
+            }
+        })
+        
+    </script>
+
+</body>
+
+</html>
